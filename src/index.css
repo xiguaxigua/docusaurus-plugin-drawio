@@ -1,0 +1,19 @@
+.docusaurus-plugin-drawio {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  overflow-x: auto;
+}
+
+html[data-theme='dark'] .docusaurus-plugin-drawio {
+  background-color: #333;
+  color: #fff;
+}
+
+.docusaurus-plugin-drawio > div {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+  min-width: 180px;
+}
