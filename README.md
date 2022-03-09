@@ -13,6 +13,14 @@
 npm i docusaurus-plugin-drawio
 ```
 
+## Add plugin
+
+```js
+  plugins: [
+    ['drawio', {}],
+  ],
+```
+
 ## Quick Start
 
 in foo.mdx file
