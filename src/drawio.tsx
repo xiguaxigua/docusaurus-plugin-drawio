@@ -8,7 +8,6 @@ interface DrawioProps {
 }
 
 const Drawio: FC<DrawioProps> = ({ content }) => {
-  console.log('content', content)
   const [tip, setTip] = useState('loading...')
   const el = useRef<HTMLDivElement>(null)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
