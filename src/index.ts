@@ -8,7 +8,7 @@ export default function drawio(
   options: Options
 ): Plugin {
   return {
-    name: 'docusaurus-plugin-demo-block',
+    name: 'docusaurus-plugin-drawio',
 
     getThemePath() {
       return path.resolve(__dirname, './theme')
@@ -30,6 +30,6 @@ export default function drawio(
           },
         ],
       }
-    }
+    },
   }
 }
