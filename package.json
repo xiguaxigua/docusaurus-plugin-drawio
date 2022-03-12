@@ -59,7 +59,9 @@
     "> 1%",
     "IE 10"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "raw-loader": "^4.0.2"
+  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --cache --fix",
