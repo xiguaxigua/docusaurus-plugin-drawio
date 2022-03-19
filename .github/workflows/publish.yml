@@ -1,0 +1,20 @@
+name: publish
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    
+    - name: Build
+      run: yarn && yarn build
+    
+    - name: Write Token
+      run: rm .npmrc && echo registry=https://registry.npmjs.org > .npmrc && echo //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }} >> .npmrc
+
+    - name: Publish
+      run: npm publish
