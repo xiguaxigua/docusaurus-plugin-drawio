@@ -34,6 +34,15 @@ import simpleGraph from '!!raw-loader!./drawio-graph/simple.drawio';
 
 you can edit drawio with https://app.diagrams.net/ or vscode plugin
 
+## Customize viewer.js file cdn address
+> default viewer.js cdn is `https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js`
+
+```js
+  plugins: [
+    ['drawio', { lib: 'http://domain/path/viewer.js' }],
+  ],
+```
+
 ## Docs
 
 https://xiguaxigua.com/docusaurus-plugin-drawio
