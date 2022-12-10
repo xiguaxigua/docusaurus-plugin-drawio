@@ -1,12 +1,8 @@
 import path from 'path'
-import { readDefaultCodeTranslationMessages } from '@docusaurus/theme-translations'
 import { Options } from './types/option-type'
 import type { DocusaurusContext, Plugin } from '@docusaurus/types'
 
-export default function drawio(
-  context: DocusaurusContext,
-  options: Options
-): Plugin {
+export default function drawio(_: DocusaurusContext, options: Options): Plugin {
   return {
     name: 'docusaurus-plugin-drawio',
 
@@ -25,7 +21,9 @@ export default function drawio(
           {
             tagName: 'script',
             attributes: {
-              src: 'https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js',
+              src:
+                options.lib ||
+                'https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js',
             },
           },
         ],
