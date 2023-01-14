@@ -44,8 +44,6 @@ import simpleGraph from '!!raw-loader!./drawio-graph/simple.drawio';
 <Drawio content={simpleGraph} page={1} />
 ```
 
-you can edit drawio with https://app.diagrams.net/ or vscode plugin
-
 ## Customize viewer.js file cdn address
 > default viewer.js cdn is `https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js`
 
@@ -58,6 +56,10 @@ you can edit drawio with https://app.diagrams.net/ or vscode plugin
 ## Docs
 
 https://xiguaxigua.com/docusaurus-plugin-drawio
+
+## How to edit draw.io file
+
+There are many way to edit such as https://app.diagrams.net/ or vscode plugin
 
 ## License
 
