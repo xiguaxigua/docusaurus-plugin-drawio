@@ -32,6 +32,18 @@ import simpleGraph from '!!raw-loader!./drawio-graph/simple.drawio';
 <Drawio content={simpleGraph} />
 ```
 
+## Select display page
+
+if your drawio file has many pages and you want to select which display by default,
+you can set `page` props
+
+```jsx
+import Drawio from '@theme/Drawio'
+import simpleGraph from '!!raw-loader!./drawio-graph/simple.drawio';
+
+<Drawio content={simpleGraph} page={1} />
+```
+
 you can edit drawio with https://app.diagrams.net/ or vscode plugin
 
 ## Customize viewer.js file cdn address

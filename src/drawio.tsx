@@ -5,9 +5,10 @@ import './index.css'
 
 interface DrawioProps {
   content: string
+  page?: number
 }
 
-const Drawio: FC<DrawioProps> = ({ content }) => {
+const Drawio: FC<DrawioProps> = ({ content, page = 0 }) => {
   const [tip, setTip] = useState('loading...')
   const el = useRef<HTMLDivElement>(null)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,6 +30,7 @@ const Drawio: FC<DrawioProps> = ({ content }) => {
       nav: true,
       resize: true,
       toolbar: 'zoom lightbox',
+      page,
       xml: content,
     }
 
@@ -48,10 +50,10 @@ const Drawio: FC<DrawioProps> = ({ content }) => {
   )
 }
 
-const Wrapper: FC<DrawioProps> = ({ content }) => {
+const Wrapper: FC<DrawioProps> = ({ content, page }) => {
   return (
     <BrowserOnly fallback={<>loading...</>}>
-      {() => <Drawio content={content} />}
+      {() => <Drawio content={content} page={page} />}
     </BrowserOnly>
   )
 }
