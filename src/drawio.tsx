@@ -5,10 +5,82 @@ import './index.css'
 
 interface DrawioProps {
   content: string
+  /** page to be displayed */
   page?: number
+  /** I don't know the meaning of this configuration，the default value is false */
+  forceCenter?: boolean
+  /** I don't know the meaning of this configuration，the default value is false */
+  center?: boolean
+  /** The toolbar can be configured through this property, for example: "zoom layers tags lightbox" */
+  toolbar?: string
+  /** I don't know the meaning of this configuration，the default value is false */
+  responsive?: boolean
+  /** page to be displayed */
+  pageId?: string
+  /** I don't know the meaning of this configuration */
+  border?: any
+  /** I don't know the meaning of this configuration */
+  move?: any
+  /** I don't know the meaning of this configuration */
+  nav?: boolean
+  /** set zoom ratio */
+  zoom?: number
+  /** I don't know the meaning of this configuration */
+  tooltips?: any
+  /** I don't know the meaning of this configuration */
+  resize?: boolean
+  /** I don't know the meaning of this configuration */
+  layers?: any
+  /** I don't know the meaning of this configuration */
+  layerIds?: any
+  /** I don't know the meaning of this configuration */
+  target?: any
+  /** I don't know the meaning of this configuration */
+  highlight?: string
+  /** I don't know the meaning of this configuration */
+  lightbox?: any
+  /** I don't know the meaning of this configuration */
+  editable?: any
+  /** I don't know the meaning of this configuration */
+  edit?: any
+  /** I don't know the meaning of this configuration */
+  editFunc?: any
+  /** the max height of graph */
+  maxHeight?: number
+  /** I don't know the meaning of this configuration */
+  autoFit?: any
+  /** I don't know the meaning of this configuration */
+  autoCrop?: any
+  /** I don't know the meaning of this configuration */
+  autoOrigin?: any
+  /** I don't know the meaning of this configuration */
+  allowZoomOut?: any
+  /** I don't know the meaning of this configuration */
+  allowZoomIn?: any
+  /** I don't know the meaning of this configuration */
+  checkVisibleState?: any
+  /** I don't know the meaning of this configuration */
+  toolbarPosition?: any
+  /** I don't know the meaning of this configuration */
+  toolbarNohide?: any
+  /** I don't know the meaning of this configuration */
+  toolbarButtons?: any
 }
 
-const Drawio: FC<DrawioProps> = ({ content, page = 0 }) => {
+const Drawio: FC<DrawioProps> = ({
+  content,
+  maxHeight,
+  autoFit,
+  autoCrop,
+  autoOrigin,
+  allowZoomOut,
+  allowZoomIn,
+  checkVisibleState,
+  toolbarPosition,
+  toolbarNohide,
+  toolbarButtons,
+  ...restConfig
+}) => {
   const [tip, setTip] = useState('loading...')
   const el = useRef<HTMLDivElement>(null)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -30,8 +102,18 @@ const Drawio: FC<DrawioProps> = ({ content, page = 0 }) => {
       nav: true,
       resize: true,
       toolbar: 'zoom lightbox',
-      page,
       xml: content,
+      'max-height': maxHeight,
+      'auto-fit': autoFit,
+      'auto-crop': autoCrop,
+      'auto-origin': autoOrigin,
+      'allow-zoom-out': allowZoomOut,
+      'allow-zoom-in': allowZoomIn,
+      'check-visible-state': checkVisibleState,
+      'toolbar-position': toolbarPosition,
+      'toolbar-nohide': toolbarNohide,
+      'toolbar-buttons': toolbarButtons,
+      ...restConfig,
     }
 
     const json = JSON.stringify(data)
@@ -50,10 +132,10 @@ const Drawio: FC<DrawioProps> = ({ content, page = 0 }) => {
   )
 }
 
-const Wrapper: FC<DrawioProps> = ({ content, page }) => {
+const Wrapper: FC<DrawioProps> = (props) => {
   return (
     <BrowserOnly fallback={<>loading...</>}>
-      {() => <Drawio content={content} page={page} />}
+      {() => <Drawio {...props} />}
     </BrowserOnly>
   )
 }

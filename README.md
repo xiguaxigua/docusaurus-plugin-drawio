@@ -53,6 +53,44 @@ import simpleGraph from '!!raw-loader!./drawio-graph/simple.drawio';
   ],
 ```
 
+## Props
+
+drawio supports many configurations, many of which I don't know what the meaning is, and I don't know the type of the corresponding value. If you know, welcome to submit a pull request
+
+|  prop   |  meaning | type | 
+|  ----  | ----  | ----  |
+| page | page to be displayed  | number |
+| toolbar | The toolbar can be configured through this property, for example: "zoom layers tags lightbox"  | string |
+| pageId | page to be displayed  | string |
+| zoom | set zoom ratio  | number |
+| maxHeight | the max height of graph  | number |
+| forceCenter | I don't know the meaning of this configuration  | boolean |
+| center | I don't know the meaning of this configuration  | boolean |
+| responsive | I don't know the meaning of this configuration  | boolean |
+| border | I don't know the meaning of this configuration  | any |
+| move | I don't know the meaning of this configuration  | any |
+| nav | I don't know the meaning of this configuration  | boolean |
+| tooltips | I don't know the meaning of this configuration  | any |
+| resize | I don't know the meaning of this configuration  | boolean |
+| layers | I don't know the meaning of this configuration  | any |
+| layerIds | I don't know the meaning of this configuration  | any |
+| target | I don't know the meaning of this configuration  | any |
+| highlight | I don't know the meaning of this configuration  | string |
+| lightbox | I don't know the meaning of this configuration  | any |
+| editable | I don't know the meaning of this configuration  | any |
+| edit | I don't know the meaning of this configuration  | any |
+| editFunc | I don't know the meaning of this configuration  | any |
+| autoFit | I don't know the meaning of this configuration  | any |
+| autoCrop | I don't know the meaning of this configuration  | any |
+| autoOrigin | I don't know the meaning of this configuration  | any |
+| allowZoomOut | I don't know the meaning of this configuration  | any |
+| allowZoomIn | I don't know the meaning of this configuration  | any |
+| checkVisibleState | I don't know the meaning of this configuration  | any |
+| toolbarPosition | I don't know the meaning of this configuration  | any |
+| toolbarNohide | I don't know the meaning of this configuration  | any |
+| toolbarButtons | I don't know the meaning of this configuration  | any |
+
+
 ## Docs
 
 https://xiguaxigua.com/docusaurus-plugin-drawio
