@@ -64,6 +64,7 @@ drawio supports many configurations, many of which I don't know what the meaning
 | pageId | page to be displayed  | string |
 | zoom | set zoom ratio  | number |
 | maxHeight | the max height of graph  | number |
+| title | Sets an optional title for the toolbar (or a tooltip if no toolbar is visible). | string |
 | forceCenter | I don't know the meaning of this configuration  | boolean |
 | center | I don't know the meaning of this configuration  | boolean |
 | responsive | I don't know the meaning of this configuration  | boolean |
@@ -72,7 +73,7 @@ drawio supports many configurations, many of which I don't know what the meaning
 | nav | I don't know the meaning of this configuration  | boolean |
 | tooltips | I don't know the meaning of this configuration  | any |
 | resize | I don't know the meaning of this configuration  | boolean |
-| layers | I don't know the meaning of this configuration  | any |
+| layers | Specifies a space-separated list of visible layers, for example "1 2 3"  | string |
 | layerIds | I don't know the meaning of this configuration  | any |
 | target | I don't know the meaning of this configuration  | any |
 | highlight | I don't know the meaning of this configuration  | string |
